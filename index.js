@@ -68,5 +68,5 @@ function validar(){
         return alert('Preencha todos os campos numéricos')
     }
     var custPerHour = (projectValue/(dayForWork*4*workingHours)) + (dayForVacation*dayForWork*workingHours)
-    result.innerHTML = "R$"+custPerHour
+    result.innerHTML = (custPerHour).toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
 }
