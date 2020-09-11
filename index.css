@@ -1,0 +1,106 @@
+*{
+    padding: 0; margin:0;
+}
+body{ background: #080024}
+.page-calc{
+    font-family: Verdana;
+    margin:0 auto;
+    
+}
+.page-calc form{
+    margin: 0 auto; margin-top: 1rem;
+    padding: 1rem;
+    width: 80%;
+    background-color: white;
+    border-radius: 1rem;
+}
+.page-calc form .input-block, .page-calc form .select-block{
+    width: 90%;
+    margin: 0 auto;
+}
+.page-calc form .select-block{
+    margin-top: .5rem;
+}
+.page-calc form #ask{
+    padding-right: 1rem;
+    font: bold 1.5rem Verdana;
+}
+.page-calc form .input-block input{
+    margin-top: 1rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+.page-calc form .input-block + .input-block{
+    margin-top: 2rem;
+}
+.page-calc form button{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    width: 10rem;height:2rem;
+    background-color: yellow;
+    border: 2px solid #e1f100;
+    border-radius: 1rem;
+}
+
+.workingDays-grid, .vacationDays-grid{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+}
+.workingDays-grid li, .vacationDays-grid li{
+    background-color: #0025fa;
+    list-style: none;
+
+    border: 2px solid #0021db;
+    border-radius: 50px;
+    height: .5rem;
+    width: 2.2rem;
+    padding: .5rem 0 .5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.workingDays-grid li span, .vacationDays-grid li span{
+    margin-top: -.3rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font: bold 1rem Arial;
+}
+.workingDays-grid li.selected, .vacationDays-grid li.selected{
+    background: #07df64;
+    border: 2px solid #34cb79;
+}
+.workingDays-grid li span, .vacationDays-grid li span{
+    pointer-events: none;
+}
+
+.page-calc #result{
+    margin: 0 auto; margin-top: 1rem;
+    border-radius: .5rem;
+    text-align: center;
+    width: 80%;
+    font: 700 2rem Arial;
+    color: #ffffff;
+    background-color: #07df64
+}
+
+@media (min-width:800px){
+    .page-calc{
+        display:flex;
+        align-items: center;
+        justify-items: space-between;
+    }
+    .page-calc form{
+        width: 30rem
+    }
+    .page-calc #result{
+        width: 20rem;
+    }
+}
